@@ -10,10 +10,7 @@ latin_to_morse = {
 }
 
 def create_reversed_dict(dictionary: dict) -> dict:
-    new_dict = dict()
-    for key, value in dictionary.items():
-        new_dict[value] = key
-    return new_dict
+    return {v:k for k, v in dictionary.items()}
 
 def encode(text: str) -> str:
     text = text.upper()
