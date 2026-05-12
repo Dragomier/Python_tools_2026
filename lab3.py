@@ -40,7 +40,6 @@ args_only_default_files, remaining_to_read = pre_parser.parse_known_args()
 
 config = configparser.ConfigParser()
 dir_name = os.path.dirname(__file__)
-print(dir_name)
 config.read(os.path.join(dir_name, args_only_default_files.alternative_config))
 
 parser = argparse.ArgumentParser(parents=[pre_parser])
